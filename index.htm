@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="web designer, webd, wed designing, WEB-D, Jitendra Sharma, 
+website design, TRAIC, The Robotics and Innovation Club, roorkee, robotics,college of engineering roorkee, free web design, jitukhandal, COER, traic-coer,
+Robotics Club web designer"/>
+<META NAME="allow-search" CONTENT="yes">
+<meta name="google-site-verification" content="CHC4cKo6pl9yZCWKZgFocGRNYM5lxW3D9yD-Q9eo-Yw" />
+<META NAME="revisit-after" CONTENT="daily">
+<META NAME="Rating" CONTENT="General">
+<META NAME="author" CONTENT="Jitendra Sharma">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <title>The Robotics And Innovation Club :: TRAIC</title>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:500,500italic' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="jQueryRotate.2.2.js"></script>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ruluko|Sirin+Stencil">
+	<!-- News Updates -->
+	<link rel="stylesheet" href="scrolling.css" type="text/css">
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="jquery.titlesequence.js"></script>
+ 
+    <script type="text/javascript">
+
+        //-----------------------------------
+        //  jQuery & jQueryRotate functions 
+        //----------------------------------
+
+        $(document).ready(function () {
+
+            $('#welcome').on('click', function () {
+
+                $('#wlogo').hide(function () {
+
+                    window.location.href = 'site/index.htm';
+
+                });
+
+            });
+
+
+            $('#welcome').on('mouseover', function () {
+
+                var _currentAngle;
+
+                _currentAngle = $('#wlogo').getRotateAngle();
+
+                if ((_currentAngle == '0') || (_currentAngle == '')) {
+
+                        $('#wlogo').rotate({
+
+                            animateTo: 360,
+
+                            callback: function () {
+
+                                $('#wlogo').rotate({
+                                    angle: 0
+                                });
+
+                            }
+                        });
+
+                };
+
+            });
+
+
+        });
+    </script>
+
+<style type="text/css">
+
+    body {
+        background-color: #000000;
+        background-image: url(img/widescreen-background.jpg); 
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-position:center; 
+        font-family: 'Ubuntu', Arial, sans-serif;
+        font-size: 1em;
+    }
+ 
+    #welcome {
+        position: relative;
+        top: 50%;
+        left: 50%;
+		top:150px;
+        z-index: 999;
+        color: #fff;
+        background: #ffffff;
+        padding: 60px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: -200px 0 0 -200px;
+        text-align: center;
+        border: inset 44px #C0C0C0;
+        cursor: pointer;
+    }
+	
+    #welcome #wlogo {
+        position: absolute;    
+        top: 104px;
+        left: 10px;
+        border: 0px;
+    }
+	#myText {
+	position: relative;
+	top: 140px;
+	margin-left:auto;
+	margin-right:auto;
+	margin: 10 px;
+	text-align:center;
+	width:auto;
+	height:30px;
+	color:#900;
+	background-color:#69C;
+	font-size: 22px;
+	font-family:"Ruluko", serif;
+	}
+
+</style>
+
+$(document).ready(function() {
+    $(".container").load('site/index.htm .featured');
+});
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+    runIt();
+
+});
+
+
+function runIt(){
+$('#myText').show(function(){
+        runIt();
+    })
+    .html('Congratulations to Team <strong> Sprunts </strong> for securing 1st Position in TechKriti\'14 at <strong>IIT Kanpur</strong>...<img src="site/emotion.gif" > </img> ')
+    .fadeIn(500)
+    .delay(2000)
+    .fadeOut(300,function(){
+        $(this).html('Manthan 2014 completed successfully. ');
+	})
+	.fadeIn(500)
+    .delay(2000)
+    .fadeOut(300,function(){
+        $(this).html('TRAIC Introduces Aero-modelling');
+    })
+    
+	.fadeIn(500)
+    .delay(2000)
+    .fadeOut(300,function(){
+        $(this).html('');
+    });
+    
+};
+</script>
+</head>
+
+<body>
+<h1 style="text-align:center; color:#900; position:relative;top:-40px; font-family:Sirin Stencil, serif;font-size:40px;">The Robotics And Innovation Club</h1>
+<h3 style="text-align:center; color:#900; opacity:0.6; position:relative;top:-60px;">(College Of Engineering Roorkee)</h3>
+
+<div id="welcome">
+    <img id="wlogo" src="3.jpg" />
+</div> 
+<h3 style="position:relative; top:150px; text-align:center; color:#999; font-size:20px; text-decoration:underline; font-family:Tahoma, Geneva, sans-serif;">
+Updates</h3>
+<div id="myText"></div>
+
+</body>
+</html>
